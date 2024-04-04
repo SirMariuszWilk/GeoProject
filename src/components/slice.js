@@ -7,7 +7,6 @@ export const projectSlice = createSlice({
   },
   reducers: {
     addProject: (state, action) => {
-      console.log("action", action);
       state.form = action.payload.form;
     },
   },
