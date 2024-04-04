@@ -87,7 +87,7 @@ const STEPS = [
     validate: ({ startDate, endDate }) => {
       const areValid = Boolean(startDate?.isValid() && endDate?.isValid());
       const areChronological =
-        startDate.isSame(endDate) || startDate.isBefore(endDate);
+        startDate?.isSame(endDate) || startDate?.isBefore(endDate);
 
       return {
         isValid: areValid && areChronological,
